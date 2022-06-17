@@ -1,12 +1,12 @@
 name: Continuous Deployment
 on: push
 jobs:
-  my-job:
+  Deploy:
     runs-on: ubuntu-latest
     environment:
       name: ${{ github.ref }}
     steps:
-      - name: my-step
+      - name: Deployment
         env:
           runner: ${{ secrets.RUNNER }}
         shell: bash
