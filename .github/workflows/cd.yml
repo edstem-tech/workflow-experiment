@@ -5,12 +5,10 @@ on: push
 jobs:
   environment:
     name: ${{ github.ref }}
-  
-  test-job:
+  my-job:
     runs-on: ubuntu-latest
     steps:
-      - name: Echo env var
+      - name: my-step
         env:
           runner: ${{ secrets.RUNNER }}
-        shell: bash
         run: echo $runner
