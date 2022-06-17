@@ -1,14 +1,8 @@
-name: Continuous Deployment
-
+name: hello-world
 on: push
-
 jobs:
-  environment:
-    name: ${{ github.ref }}
   my-job:
     runs-on: ubuntu-latest
     steps:
       - name: my-step
-        env:
-          runner: ${{ secrets.RUNNER }}
-        run: echo $runner
+        run: echo "Hello World!"
