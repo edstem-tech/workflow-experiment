@@ -7,4 +7,7 @@ jobs:
       name: ${{ github.ref }}
     steps:
       - name: my-step
-        run: echo "Hello World!"
+        env:
+          runner: ${{ secrets.runner }}
+        shell: bash
+        run: echo $runner
